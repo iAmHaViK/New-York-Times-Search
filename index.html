@@ -1,0 +1,69 @@
+<!-- https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=d9e811dda52145e39c98c7a8e501fff3&q=Obama-->
+<!-- end date https://api.nytimes.com/svc/search/v2/articlesearch.json?q=Obama&begin_date=20040101&end_date=20060101&api-key=d9e811dda52145e39c98c7a8e501fff3 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>New York Times Search</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<!-- Jumbotron -->
+			<div class="jumbotron">
+				<h1>New York Times Search</h1>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12">
+					<!-- Panel -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Search Parameters</h3>
+						</div>
+						<div class="panel-body">
+							<form action="/action_page.php">
+								<div class="form-group">
+	    							<label for="search">Search Term:</label>
+	    							<input type="text" class="form-control" id="search">
+  								</div>
+  								<div class="form-group">
+	  								<label for="sel1">Number of Records to Retrieve:</label>
+								    <select class="form-control" id="numRecords">
+										<option value="1">1</option>
+										<option value="5" selected="">5</option>
+										<option value="10">10</option>
+									</select>
+							   </div>
+  								<div class="form-group">
+  									<label for="startYear">Start Year:</label>
+  									<input type="text" class="form-control" id="startYear">
+  								</div>
+  								<div class="form-group">
+  									<label for="endYear">End Year:</label>
+  									<input type="text" class="form-control" id="endYear">
+  								</div>
+  								<button type="submit" class="btn btn-default" id="searchBtn">Search</button>
+  								<button type="button" class="btn btn-default">Clear</button>
+  							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<!-- Results Panel -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Search Results</h3>
+						</div>
+						<div class="panel-body" id="wellSection">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
